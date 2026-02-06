@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import { attendanceAPI, employeeAPI } from '../services/api';
-import { validateAttendanceForm, formatDate, formatDateDisplay, getTodayDate } from '../utils/validation';
+import { validateAttendanceForm, formatDateDisplay, getTodayDate } from '../utils/validation';
 import Button from '../components/common/Button';
 import Input from '../components/common/Input';
 import Loading from '../components/common/Loading';

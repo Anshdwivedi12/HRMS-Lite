@@ -21,7 +21,7 @@ const Dashboard = () => {
         try {
             setLoading(true);
 
-            const [summaryResponse, employeesResponse] = await Promise.all([
+            const [summaryResponse] = await Promise.all([
                 attendanceAPI.getSummary(),
                 employeeAPI.getAll()
             ]);
