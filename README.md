@@ -185,92 +185,19 @@ Visit `http://localhost:5000/api/health` - should return success message
 ### Health Check
 - `GET /api/health` - API health status
 
-## 🌐 Deployment
+## 🌐 Live Demo
 
-See **[DEPLOYMENT.md](./DEPLOYMENT.md)** for complete deployment instructions.
+- **Live Frontend**: [https://hrms-lite-frontend.netlify.app](https://hrms-lite-frontend.netlify.app)
+- **Hosted Backend**: [https://hrms-lite-backend-urxb.onrender.com](https://hrms-lite-backend-urxb.onrender.com)
 
-**Quick Overview:**
-1. Deploy PostgreSQL database (Render/Railway/Supabase)
-2. Run migration file to create tables
-3. Deploy backend to Render/Railway
-4. Deploy frontend to Netlify
-5. Update environment variables
+## � Author
 
-## 🎨 Design System
+**Ansh Dwivedi**
 
-### Colors
-- **Primary**: Navy Blue (#1e40af)
-- **Success**: Green (#10b981)
-- **Danger**: Red (#ef4444)
-- **Warning**: Orange (#f59e0b)
-- **Background**: Light Gray (#f8fafc)
+Built with ❤️ for efficient HR management.
 
-### Typography
-- **Font**: Inter (Google Fonts)
-- **Weights**: 400, 500, 600, 700
-
-### Spacing
-- 8px grid system (8px, 16px, 24px, 32px, 48px)
-
-## 🔒 Security Features
-
-- **Helmet.js** for security headers
-- **CORS** configuration
-- **Parameterized SQL queries** to prevent SQL injection
-- **Input validation** on both client and server
-- **Error handling** without exposing sensitive data
-
-## 📝 Database Schema
-
-### employees
-- `id` - Serial primary key
-- `employee_id` - Unique employee identifier
-- `full_name` - Employee name
-- `email` - Unique email address
-- `department` - Department name
-- `created_at` - Timestamp
-- `updated_at` - Timestamp
-
-### attendance
-- `id` - Serial primary key
-- `employee_id` - Foreign key to employees
-- `date` - Attendance date
-- `status` - 'Present' or 'Absent'
-- `created_at` - Timestamp
-- **Unique constraint** on (employee_id, date)
-- **Cascade delete** when employee is deleted
-
-## 🐛 Troubleshooting
-
-### Common Issues
-
-**Database connection error**
-- Check if PostgreSQL is running
-- Verify DATABASE_URL in .env file
-
-**CORS errors**
-- Ensure FRONTEND_URL is set in backend .env
-- Check that both servers are running
-
-**API calls failing**
-- Verify REACT_APP_API_URL in frontend .env
-- Check backend server logs
-
-## 📄 License
-
-This project is open source and available for educational and commercial use.
-
-## 👤 Author
-
-Built with ❤️ for efficient HR management
+[![LinkedIn](https://img.shields.io/badge/LinkedIn-Connect-blue?style=for-the-badge&logo=linkedin)](https://www.linkedin.com/in/anshdwivedi-/)
 
 ---
 
-**Note**: This is a production-ready application, but for enterprise use, consider adding:
-- User authentication and authorization
-- Role-based access control (RBAC)
-- Audit logs
-- Data export features
-- Email notifications
-- Two-factor authentication
-- Advanced reporting
+**Note**: This is a production-ready application submitted for the Full-Stack Coding Assignment. It meets all core requirements and includes bonus features like a real-time dashboard and attendance filtering.
