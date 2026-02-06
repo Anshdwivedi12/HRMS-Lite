@@ -1,16 +1,25 @@
 .input-group {
-    margin-bottom: var(--spacing-md);
+    margin-bottom: 20px;
+    width: 100%;
 }
 
 .input-label {
     display: block;
-    margin-bottom: var(--spacing-xs);
-    font-size: var(--font-size-sm);
-    font-weight: 500;
-    color: var(--text-secondary);
+    margin-bottom: 8px;
+    font-size: 13px;
+    font-weight: 600;
+    color: var(--text-primary);
 }
 
 .required-mark {
     color: var(--danger);
     margin-left: 4px;
+}
+
+.error-text {
+    display: block;
+    margin-top: 6px;
+    font-size: 12px;
+    color: var(--danger);
+    font-weight: 500;
 }

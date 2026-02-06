@@ -42,21 +42,36 @@
 
 .attendance-quick-form {
     display: flex;
-    align-items: flex-end;
-    gap: var(--space-lg);
+    align-items: center;
+    /* Center them vertically in a row */
+    gap: var(--space-md);
     flex-wrap: wrap;
+    background: #f8fafc;
+    padding: 20px;
+    border-radius: var(--radius-sm);
+    border: 1px solid var(--border-light);
+}
+
+.attendance-quick-form .input-group {
+    margin-bottom: 0;
+    /* Remove margin in this quick form row */
+    width: auto;
+    min-width: 200px;
 }
 
 .radio-group-modern {
     display: flex;
-    gap: var(--space-sm);
-    background: var(--bg-main);
+    gap: 4px;
+    background: #e2e8f0;
     padding: 4px;
     border-radius: var(--radius-sm);
+    height: 42px;
+    /* Match height of other inputs */
+    align-items: center;
 }
 
 .radio-pill {
-    padding: 10px 20px;
+    padding: 8px 16px;
     border-radius: 6px;
     font-size: 14px;
     font-weight: 600;
@@ -84,6 +99,10 @@
     font-weight: 700;
     color: var(--text-primary);
     margin-bottom: 24px;
+}
+
+.mark-attendance-section {
+    margin-top: var(--space-xl);
 }
 
 @media (max-width: 768px) {

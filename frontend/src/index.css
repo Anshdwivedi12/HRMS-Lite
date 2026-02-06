@@ -100,6 +100,33 @@ body {
   gap: var(--space-md);
 }
 
+/* Global Inputs */
+input,
+select,
+textarea {
+  padding: 10px 14px;
+  border-radius: var(--radius-sm);
+  border: 1px solid var(--border);
+  background: white;
+  font-family: var(--font-main);
+  font-size: 14px;
+  transition: var(--transition);
+  color: var(--text-primary);
+  width: 100%;
+}
+
+input:focus,
+select:focus,
+textarea:focus {
+  outline: none;
+  border-color: var(--primary);
+  box-shadow: 0 0 0 4px var(--primary-light);
+}
+
+input::placeholder {
+  color: var(--text-muted);
+}
+
 /* Search Bar */
 .search-bar {
   position: relative;
@@ -111,22 +138,12 @@ body {
   position: absolute;
   left: 12px;
   color: var(--text-muted);
+  z-index: 10;
 }
 
 .search-bar input {
-  padding: 10px 16px 10px 40px;
-  border-radius: var(--radius-sm);
-  border: 1px solid var(--border);
-  background: white;
-  font-size: 14px;
+  padding-left: 40px;
   width: 280px;
-  transition: var(--transition);
-}
-
-.search-bar input:focus {
-  outline: none;
-  border-color: var(--primary);
-  box-shadow: 0 0 0 4px var(--primary-light);
 }
 
 /* Common Components */

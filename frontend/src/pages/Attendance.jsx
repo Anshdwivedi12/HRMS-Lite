@@ -204,7 +204,7 @@ const Attendance = () => {
             </div>
 
             {selectedEmployeeId && (
-                <div className="mark-attendance-section card" style={{ marginTop: '24px', padding: '24px' }}>
+                <div className="mark-attendance-section card">
                     <h3 className="section-title">Mark Attendance</h3>
                     <form onSubmit={(e) => {
                         markForm.employee_id = selectedEmployeeId;
