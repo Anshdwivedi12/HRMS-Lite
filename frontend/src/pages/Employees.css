@@ -1,0 +1,34 @@
+.employees-page {
+    animation: fadeIn 0.3s ease-out;
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(10px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.modal-actions {
+    display: flex;
+    gap: var(--space-md);
+    justify-content: flex-end;
+    margin-top: var(--space-lg);
+    padding-top: var(--space-lg);
+    border-top: 1px solid var(--border);
+}
+
+.delete-message {
+    color: var(--text-secondary);
+    line-height: 1.6;
+    margin: 0;
+}
+
+.delete-message strong {
+    color: var(--text-primary);
+}
