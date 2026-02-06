@@ -1,6 +1,13 @@
 import axios from 'axios';
 
-const API_BASE_URL = (process.env.REACT_APP_API_URL || 'http://localhost:5000/api').replace(/\/?$/, '/');
+let baseUrl = process.env.REACT_APP_API_URL || 'http://localhost:5000/api';
+// Ensure it ends with /api/ correctly even if the user forgot it in Netlify
+if (!baseUrl.includes('/api')) {
+    baseUrl = baseUrl.replace(/\/?$/, '/api/');
+} else {
+    baseUrl = baseUrl.replace(/\/?$/, '/');
+}
+const API_BASE_URL = baseUrl;
 
 // Create axios instance
 const api = axios.create({
