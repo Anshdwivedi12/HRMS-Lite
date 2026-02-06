@@ -1,6 +1,6 @@
 import axios from 'axios';
 
-const API_BASE_URL = process.env.REACT_APP_API_URL || 'http://localhost:5000/api';
+const API_BASE_URL = (process.env.REACT_APP_API_URL || 'http://localhost:5000/api').replace(/\/?$/, '/');
 
 // Create axios instance
 const api = axios.create({
@@ -26,25 +26,25 @@ api.interceptors.response.use(
 export const employeeAPI = {
     // Get all employees
     getAll: async () => {
-        const response = await api.get('/employees');
+        const response = await api.get('employees');
         return response.data;
     },
 
     // Get single employee
     getById: async (employeeId) => {
-        const response = await api.get(`/employees/${employeeId}`);
+        const response = await api.get(`employees/${employeeId}`);
         return response.data;
     },
 
     // Create employee
     create: async (employeeData) => {
-        const response = await api.post('/employees', employeeData);
+        const response = await api.post('employees', employeeData);
         return response.data;
     },
 
     // Delete employee
     delete: async (employeeId) => {
-        const response = await api.delete(`/employees/${employeeId}`);
+        const response = await api.delete(`employees/${employeeId}`);
         return response.data;
     }
 };
@@ -56,25 +56,25 @@ export const employeeAPI = {
 export const attendanceAPI = {
     // Mark attendance
     mark: async (attendanceData) => {
-        const response = await api.post('/attendance', attendanceData);
+        const response = await api.post('attendance', attendanceData);
         return response.data;
     },
 
     // Get attendance for specific employee
     getByEmployee: async (employeeId) => {
-        const response = await api.get(`/attendance/${employeeId}`);
+        const response = await api.get(`attendance/${employeeId}`);
         return response.data;
     },
 
     // Get attendance for specific date
     getByDate: async (date) => {
-        const response = await api.get(`/attendance/date/${date}`);
+        const response = await api.get(`attendance/date/${date}`);
         return response.data;
     },
 
     // Get attendance summary
     getSummary: async (date = null) => {
-        const url = date ? `/attendance/summary?date=${date}` : '/attendance/summary';
+        const url = date ? `attendance/summary?date=${date}` : 'attendance/summary';
         const response = await api.get(url);
         return response.data;
     }
